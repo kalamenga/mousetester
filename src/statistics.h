@@ -2,8 +2,10 @@
 #define STATISTICS_H
 
 #include "types.h"
+#include <stdbool.h>
 
-Statistics calculate_interval_statistics(const MouseLog *log);
+Statistics calculate_interval_statistics(const MouseLog *log,
+                                         bool is_frequency);
 void calculate_timestamps(MouseLog *log, int64_t freq);
 
 #endif
